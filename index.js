@@ -28,7 +28,7 @@ function buttonanimation(buttonInnerHtml)
   activebutton.classList.add("pressed");
   
   setTimeout(function(){
-  activeButton.classList.remove("pressed");
+  activebutton.classList.remove("pressed");
   },100);
   
 }
