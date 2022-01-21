@@ -9,8 +9,8 @@ function fun()
 {
 var buttonInnerHtml=this.innerHTML;
 makesound(buttonInnerHtml);
+buttonanimation(buttonInnerHtml);
 }
-
 
 //for keyboard presss
 document.addEventListener("keypress",fun1);
@@ -18,12 +18,24 @@ document.addEventListener("keypress",fun1);
 function fun1(event)
 {
 makesound(event.key);
+buttonanimation(buttonInnerHtml);
+}
+
+//adding animation to Our Button.
+function buttonanimation(buttonInnerHtml)
+{
+ var activebutton = document.querySelector("."+buttonInnerHtml); 
+  activebutton.classList.add("pressed");
+  
+  setTimeout(function(){
+  activeButton.classList.remove("pressed");
+  },100);
+  
 }
 
 
 function makesound(choice)
 {
-
 switch (choice)
 {
 
@@ -76,6 +88,5 @@ switch (choice)
   break;
   }
   default:
-
 }
 }
