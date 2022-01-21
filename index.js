@@ -18,7 +18,7 @@ document.addEventListener("keypress",fun1);
 function fun1(event)
 {
 makesound(event.key);
-buttonanimation(buttonInnerHtml);
+buttonanimation(event.key);
 }
 
 //adding animation to Our Button.
